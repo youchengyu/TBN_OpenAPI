@@ -5,6 +5,8 @@ People could filter and download data into one CSV table.
 利用R語言下載TBN openAPI 篩選符合查詢條件的資料，並彙整成一個檔案(非官方)
 function內使用的關鍵字說明請參考TBN的API文件(https://www.tbn.org.tw/data/api/openapi/v2)
 
+:exclamation: 資料量可能比想像中的多，強烈建議加上"limit=20"來避免電腦負荷過高
+
 ## Usage
 ```R
 TBN_download <- TBN_OpenAPI(...,version="v2",type="occurrence")
