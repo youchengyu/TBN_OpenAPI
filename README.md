@@ -1,12 +1,12 @@
 # TBN_OpenAPI
 An non-official R function for downloading Taiwan Biodiversity Network (TBN) data through OpenAPI.
-People could filter and download data into one CSV table.
+People could download filtered data into one CSV table.
 
-利用R語言下載TBN openAPI 篩選符合查詢條件的資料，並彙整成一個檔案(非官方)
+非官方的 R function，利用OpenAPI下載台灣生物多樣性網絡 TBN openAPI 篩選符合查詢條件的資料，並彙整成一個檔案。
 function內使用的關鍵字說明請參考TBN的API文件(https://www.tbn.org.tw/data/api/openapi/v2)
 
-:exclamation: 資料量可能比想像中的多，強烈建議加上"limit=20"來避免電腦負荷過高
-
+:exclamation: limit在function內預設為300，若要調整一頁的下載數量，要再自行修改function
+:exclamation: "limit" is setted to 300, if people need to change limit number, modifing the function is required
 ## Usage
 ```R
 TBN_download <- TBN_OpenAPI(...,version="v2",type="occurrence")
