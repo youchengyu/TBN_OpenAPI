@@ -1,7 +1,7 @@
 ############################
 # TBN OpenAPI version 2.5 #
 # author: Vincent yu       #
-# update: 2022-03-17       #
+# update: 2022-04-07       #
 ############################
 
 # API documents: https://www.tbn.org.tw/data/api/openapi/v2
@@ -11,8 +11,8 @@ library(tidyverse)
 library(jsonlite)
 library(progress)
 
-TBN_OpenAPIv25 <- function(...,version="v25",type="occurrence",message=TRUE){
-  occ_api <-jsonlite::fromJSON(paste0("https://www.tbn.org.tw/api/v25/",type,"?",...,"&limit=3000"))
+TBN_OpenAPIv25 <- function(...,version="v25",type="occurrence",limit=300,message=TRUE){
+  occ_api <-jsonlite::fromJSON(paste0("https://www.tbn.org.tw/api/v25/",type,"?",...,"&limit=",limit))
   page <- list()
   page[[1]] <- occ_api %>% .$data
   if (occ_api %>% .$meta %>% .$status == "NOT FOUND"){
