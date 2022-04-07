@@ -10,7 +10,7 @@ function內使用的關鍵字說明請參考TBN的API文件(https://www.tbn.org.
 :exclamation: "limit" is setted to 300, if people need to change limit number, modifing the function is required
 ## Usage
 ```R
-TBN_download <- TBN_OpenAPI(...,version="v2",type="occurrence")
+TBN_download <- TBN_OpenAPI(...,version="v25",type="occurrence",limit=300)
 ```
 Arguments | -- 
 ---|---
