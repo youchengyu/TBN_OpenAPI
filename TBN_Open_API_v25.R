@@ -11,7 +11,7 @@ library(tidyverse)
 library(jsonlite)
 library(progress)
 
-TBN_OpenAPIv25 <- function(...,version="v25",type="occurrence",limit=300,message=TRUE){
+TBN_OpenAPI <- function(...,version="v25",type="occurrence",limit=300,message=TRUE){
   occ_api <-jsonlite::fromJSON(paste0("https://www.tbn.org.tw/api/v25/",type,"?",...,"&limit=",limit))
   page <- list()
   page[[1]] <- occ_api %>% .$data
