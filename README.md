@@ -1,8 +1,5 @@
-######################
-# updated:2022-04-07 #
-######################
-
 # TBN_OpenAPI
+###### [last updated 2022-04-07]
 An non-official R function for downloading Taiwan Biodiversity Network (TBN) data through OpenAPI.
 People could download filtered data into one CSV table.
 
