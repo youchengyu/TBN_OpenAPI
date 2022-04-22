@@ -16,9 +16,9 @@ Arguments | 完整說明可至TBN網站查看(https://www.tbn.org.tw/data/api/op
 ---|---
 ...     | 字串, 查詢參數，根據你所選的服務類型(type)，可以查詢的條件不同，條件間以"&"連接. ex: "eventPlaceAdminarea=南投&eventDate=2019~2021" 即可搜尋南投縣2019-2021年的TBN網站資料。
 version | 字串, API的版本，預設為"v25"。
-type    | 字串, 服務類型，分為三類："dataset", "species", "occurrence"，預設為"occurrence"。
+type    | 字串, 服務類型，分為三類："occurrence", "taxon","dataset" ，預設為"occurrence"。
 limit   | 數字, 預設為300，至多為1000
 
 ## Value
-<p>根據你選擇的服務類型，你將獲得 資料集清單、物種名錄、觀測資料。</p>
-<p>According to the type you chose, a data.frame with TBN datasets/species list/occurrences is created.</p>
+根據你選擇的服務類型，你將獲得**觀測紀錄occurrence**、**物種名錄taxon**、**資料集清單dataset**。
+<p>According to the type you chose, a data.frame with TBN occurrences/taxon list/datasets is created.</p>
