@@ -1,7 +1,7 @@
 # TBN_OpenAPI
 ###### [last updated: 2022-04-19]
-An non-official R function for downloading Taiwan Biodiversity Network (TBN) data through OpenAPI.
-People could download filtered data into one data table.
+An unofficial R function for downloading Taiwan Biodiversity Network (TBN) data through OpenAPI.
+People could download filtered data into a data table.
 
 非官方的 R function，利用OpenAPI下載台灣生物多樣性網絡 TBN openAPI 篩選符合查詢條件的資料，並彙整成一個檔案。
 function內使用的關鍵字說明請參考TBN的API文件(https://www.tbn.org.tw/data/api/openapi/v25)
