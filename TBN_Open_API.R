@@ -1,7 +1,7 @@
 ############################
 # TBN OpenAPI version 2.5 #
 # author: Vincent yu       #
-# update: 2022-04-07       #
+# update: 2022-05-24       #
 ############################
 
 # API documents: https://www.tbn.org.tw/data/api/openapi/v2
@@ -17,8 +17,9 @@ TBN_OpenAPI <- function(...,version="v25",type="occurrence",limit=300,message=TR
   page[[1]] <- occ_api %>% .$data
   if (occ_api %>% .$meta %>% .$status == "NOT FOUND"){
     message("type= ", type, ", version= ", version, " ","No data downloaded")
-  } else if(occ_api %>% .$meta %>% .$status == "SUCCESS"){
-    pg <- (occ_api %>% .$meta %>% .$total/3000) %>% ceiling()
+  } 
+  else if(occ_api %>% .$meta %>% .$status == "SUCCESS"){
+    pg <- (occ_api %>% .$meta %>% .$total/limit) %>% ceiling()
     pb <- progress_bar$new(total = pg-1)
     if(pg>1){
       for ( i in 2:pg) { #download and combine data
