@@ -4,7 +4,7 @@
 # update: 2022-05-24       #
 ############################
 
-# API documents: https://www.tbn.org.tw/data/api/openapi/v2
+# API documents: https://www.tbn.org.tw/data/api/openapi/v25
 # A way to download TBN Open API in r
 
 library(tidyverse)
