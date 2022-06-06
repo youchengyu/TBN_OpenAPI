@@ -1,7 +1,7 @@
 ############################
-# TBN OpenAPI version 2.5 #
+# TBN OpenAPI version 2.5  #
 # author: Vincent yu       #
-# update: 2022-05-24       #
+# update: 2022-06-06       #
 ############################
 
 # API documents: https://www.tbn.org.tw/data/api/openapi/v2
@@ -10,6 +10,7 @@
 library(tidyverse)
 library(jsonlite)
 library(progress)
+library(data.table)
 
 TBN_OpenAPI <- function(...,version="v25",type="occurrence",limit=300,message=TRUE){
   occ_api <-jsonlite::fromJSON(paste0("https://www.tbn.org.tw/api/v25/",type,"?",...,"&limit=",limit))
@@ -19,6 +20,7 @@ TBN_OpenAPI <- function(...,version="v25",type="occurrence",limit=300,message=TR
     message("type= ", type, ", version= ", version, " ","No data downloaded")
   } 
   else if(occ_api %>% .$meta %>% .$status == "SUCCESS"){
+    records <- occ_api %>% .$meta %>% .$total
     pg <- (occ_api %>% .$meta %>% .$total/limit) %>% ceiling()
     pb <- progress_bar$new(total = pg-1)
     if(pg>1){
@@ -27,8 +29,8 @@ TBN_OpenAPI <- function(...,version="v25",type="occurrence",limit=300,message=TR
         pb$tick()
         page[[i]] <- occ_api %>% .$data
       }
-      result <- jsonlite::rbind_pages(page) 
-      message("type= ", type, ", version= ", version, " ",dim(result)[1],"data downloaded")
+      result <- rbindlist(page) 
+      message("type= ", type, ", version= ", version, " ", records," data downloaded") #result
       return(result)
     }
     else {
