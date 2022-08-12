@@ -52,7 +52,7 @@ taxon
 datasets <- TBN_OpenAPI(type= "dataset","name=taie")
 datasets
 ```
-|datasetName|                      datasetTaxonGroup|              datasetLicense| datasetPublisher|
-|---|---|---|---|
-|臺灣特有生物研究保育中心植物標本館(TAIE)苔蘚資料|               真菌類、其他無脊椎、苔蘚| 政府資料開放授權條款－第1版|         特生中心|
-|特有生物研究保育中心植物標本館資料集 (TAIE)| 苔蘚、石松類、裸子植物、蕨類、被子植物| 政府資料開放授權條款－第1版|         特生中心|
+|datasetName|                      datasetTaxonGroup|              datasetLicense| datasetPublisher|...|
+|---|---|---|---|---|
+|臺灣特有生物研究保育中心植物標本館(TAIE)苔蘚資料|               真菌類、其他無脊椎、苔蘚| 政府資料開放授權條款－第1版|         特生中心|...|
+|特有生物研究保育中心植物標本館資料集 (TAIE)| 苔蘚、石松類、裸子植物、蕨類、被子植物| 政府資料開放授權條款－第1版|         特生中心|...|
