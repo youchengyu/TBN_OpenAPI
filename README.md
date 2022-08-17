@@ -25,7 +25,7 @@ limit   | 數字, 預設為300，至多為1000
 
 ### 觀測紀錄occurrence
 ```R
-occurrences <- TBN_OpenAPI(type="occurrence", "datasetUUID=","86714dd0-3c06-4d80-b8fd-3b92eec4e181","&boundedBy=120.84%2023.85%2C120.76%2023.81")
+occurrences <- TBN_OpenAPI(type="occurrence", "datasetUUID=","86714dd0-3c06-4d80-b8fd-3b92eec4e181","&boundedBy=120.84%20%23.85%2C120.76%20%23.81")
 occurrences
 ```
 |occurrenceID|modified|originalVernacularName|basisOfRecord|externalID|...|
